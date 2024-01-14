@@ -1,12 +1,6 @@
-load("@rules_rust//rust:defs.bzl", "rust_binary", "rust_library")
+load("@rules_rust//rust:defs.bzl", "rust_binary")
 
 rust_binary(
     name = "main",
     srcs = ["main.rs"],
-    visibility = ["//visibility:public"],
-)
-
-rust_library(
-    name = "libgit",
-    srcs = ["libgit.rs"],
 )

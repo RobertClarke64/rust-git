@@ -1,6 +1,6 @@
-pub mod libgit;
+extern crate libgit;
 
 fn main() {
     println!("Hello, world!");
-    libgit::main();
+    libgit::init();
 }
