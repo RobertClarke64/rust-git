@@ -1,7 +1,5 @@
 extern crate argparse;
 
-use std::env;
-
 use argparse::{ArgumentParser, List, Store};
 
 fn main() {
