@@ -1,6 +1,6 @@
-use libgit;
+use libgit::init;
 
 fn main() {
     println!("Hello, world!");
-    libgit::init();
+    init();
 }

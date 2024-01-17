@@ -1,5 +1,5 @@
 {
-  "checksum": "3a06ad7a5272c8150cbb75addeaffc4654901d87afbf5e05aa53262164a3b4db",
+  "checksum": "4bcff359359e1a8ce1be32b6e56b1c3f62c419f58820b34110d94ad819c2941d",
   "crates": {
     "git-rust 0.1.0": {
       "name": "git-rust",
@@ -24,7 +24,7 @@
         {
           "Library": {
             "crate_name": "libgit",
-            "crate_root": "src/lib.rs",
+            "crate_root": "src/libgit.rs",
             "srcs": [
               "**/*.rs"
             ]

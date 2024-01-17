@@ -4,4 +4,5 @@ rust_binary(
     name = "main",
     srcs = ["main.rs"],
     visibility = ["//visibility:public"],
+    deps = ["//libgit/src:libgit"],
 )
