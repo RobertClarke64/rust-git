@@ -1,6 +1,7 @@
 extern crate argparse;
 
 use argparse::{ArgumentParser, List, Store};
+use libgit;
 
 fn main() {
     let mut subcommand: String = String::from("");
@@ -22,5 +23,8 @@ fn main() {
         ap.parse_args_or_exit();
     }
 
-    dbg!(args);
+    match subcommand.as_str() {
+        "init" => libgit::init(),
+        _ => println!("Bad command"),
+    }
 }

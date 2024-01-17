@@ -4,5 +4,8 @@ rust_binary(
     name = "main",
     srcs = ["main.rs"],
     visibility = ["//visibility:public"],
-    deps = ["@crate_index//:argparse"],
+    deps = [
+        "//libgit/src:libgit",
+        "@crate_index//:argparse",
+    ],
 )
