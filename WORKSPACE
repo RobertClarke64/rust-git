@@ -91,7 +91,9 @@ crates_repository(
     cargo_lockfile = "//:Cargo.lock",
     lockfile = "//:cargo-bazel-lock.json",
     manifests = [
+        "//:Cargo.toml",
         "//:git-rust/Cargo.toml",
+        "//:libgit/Cargo.toml",
     ],
 )
 

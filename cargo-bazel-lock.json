@@ -1,5 +1,5 @@
 {
-  "checksum": "25d323dbacaf08360867bcdf004cc5d44f96b0816ea4d4fd454b67cbfc706b39",
+  "checksum": "3a06ad7a5272c8150cbb75addeaffc4654901d87afbf5e05aa53262164a3b4db",
   "crates": {
     "git-rust 0.1.0": {
       "name": "git-rust",
@@ -15,11 +15,37 @@
         "version": "0.1.0"
       },
       "license": null
+    },
+    "libgit 0.1.0": {
+      "name": "libgit",
+      "version": "0.1.0",
+      "repository": null,
+      "targets": [
+        {
+          "Library": {
+            "crate_name": "libgit",
+            "crate_root": "src/lib.rs",
+            "srcs": [
+              "**/*.rs"
+            ]
+          }
+        }
+      ],
+      "library_target_name": "libgit",
+      "common_attrs": {
+        "compile_data_glob": [
+          "**"
+        ],
+        "edition": "2021",
+        "version": "0.1.0"
+      },
+      "license": null
     }
   },
   "binary_crates": [],
   "workspace_members": {
-    "git-rust 0.1.0": ""
+    "git-rust 0.1.0": "git-rust",
+    "libgit 0.1.0": "libgit"
   },
   "conditions": {
     "aarch64-apple-darwin": [
