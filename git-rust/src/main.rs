@@ -24,7 +24,7 @@ fn main() {
     }
 
     match subcommand.as_str() {
-        "init" => libgit::init(),
+        "init" => libgit::cmd_init(),
         _ => println!("Bad command"),
     }
 }
