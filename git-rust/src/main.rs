@@ -1,6 +1,28 @@
-use libgit::init;
+extern crate argparse;
+
+use std::env;
+
+use argparse::{ArgumentParser, List, Store};
 
 fn main() {
-    println!("Hello, world!");
-    init();
+    let mut subcommand: String = String::from("");
+    let mut args: Vec<String> = vec![];
+
+    {
+        let mut ap = ArgumentParser::new();
+
+        // Parse subcommand - e.g. init, add, commit, etc.
+        ap.refer(&mut subcommand).required().add_argument(
+            "command",
+            Store,
+            "Command to run - e.g. \"init\", \"add\"",
+        );
+
+        // Parse all extra args
+        ap.refer(&mut args)
+            .add_argument("arguments", List, "Extra arguments for command");
+        ap.parse_args_or_exit();
+    }
+
+    dbg!(args);
 }

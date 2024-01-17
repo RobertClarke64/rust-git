@@ -1,6 +1,36 @@
 {
-  "checksum": "4bcff359359e1a8ce1be32b6e56b1c3f62c419f58820b34110d94ad819c2941d",
+  "checksum": "49e5b55a7c481205368c0c893d77c44b367f2d6ab9a5631a37fa8d3bce83381d",
   "crates": {
+    "argparse 0.2.2": {
+      "name": "argparse",
+      "version": "0.2.2",
+      "repository": {
+        "Http": {
+          "url": "https://crates.io/api/v1/crates/argparse/0.2.2/download",
+          "sha256": "3f8ebf5827e4ac4fd5946560e6a99776ea73b596d80898f357007317a7141e47"
+        }
+      },
+      "targets": [
+        {
+          "Library": {
+            "crate_name": "argparse",
+            "crate_root": "src/lib.rs",
+            "srcs": [
+              "**/*.rs"
+            ]
+          }
+        }
+      ],
+      "library_target_name": "argparse",
+      "common_attrs": {
+        "compile_data_glob": [
+          "**"
+        ],
+        "edition": "2015",
+        "version": "0.2.2"
+      },
+      "license": "MIT"
+    },
     "git-rust 0.1.0": {
       "name": "git-rust",
       "version": "0.1.0",
@@ -11,6 +41,15 @@
         "compile_data_glob": [
           "**"
         ],
+        "deps": {
+          "common": [
+            {
+              "id": "argparse 0.2.2",
+              "target": "argparse"
+            }
+          ],
+          "selects": {}
+        },
         "edition": "2021",
         "version": "0.1.0"
       },
