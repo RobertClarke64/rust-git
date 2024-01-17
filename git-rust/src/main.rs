@@ -1,4 +1,4 @@
-extern crate libgit;
+mod libgit;
 
 fn main() {
     println!("Hello, world!");
